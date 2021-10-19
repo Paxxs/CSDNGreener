@@ -1,0 +1,13 @@
+--- csdngreener_greasyfork.user.js	2021-10-19 19:03:50.336524500 +0800
++++ csdngreener_greasyfork.user.mod.js	2021-10-19 19:04:18.805000200 +0800
+@@ -837,10 +837,6 @@
+         stopTimeMilli = Date.now();
+         l("优化完毕! 耗时 " + (stopTimeMilli - startTimeMilli) + "ms");
+         // 延迟嵌入用户使用脚本情况JS，不影响性能
+-        $("head").append('<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>');
+-        setTimeout(function() {
+-            $("head").append('<script>LA.init({id: "JQTDiOVZ2pRjGa1K",ck: "JQTDiOVZ2pRjGa1K"})</script>');
+-        }, 2000);
+     }, 0);
+ })();
+ 
