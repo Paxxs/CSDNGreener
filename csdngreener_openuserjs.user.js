@@ -848,10 +848,6 @@ var protect_svg = '<svg t="1629560538805" class="icon" viewBox="0 0 1024 1024" v
         stopTimeMilli = Date.now();
         l("优化完毕! 耗时 " + (stopTimeMilli - startTimeMilli) + "ms");
         // 延迟嵌入用户使用脚本情况JS，不影响性能
-        $("head").append('<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>');
-        setTimeout(function() {
-            $("head").append('<script>LA.init({id: "JQTDiOVZ2pRjGa1K",ck: "JQTDiOVZ2pRjGa1K"})</script>');
-        }, 2000);
     }, 0);
 })();
 
