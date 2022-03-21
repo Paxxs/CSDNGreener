@@ -846,6 +846,8 @@ var protect_svg = '<svg t="1629560538805" class="icon" viewBox="0 0 1024 1024" v
         l("优化完毕! 耗时 " + (stopTimeMilli - startTimeMilli) + "ms");
         // 延迟嵌入用户使用脚本情况JS，不影响性能
     }, 0);
+
+    removeMask()
 })();
 
 function l(log) {
@@ -1632,4 +1634,13 @@ function getHeight(element) {
 
 function isFirefox() {
     return navigator.userAgent.indexOf("Firefox") > 0;
+}
+
+// 关闭防复制限制
+function removeMask(){
+    for (let v of document.getElementsByTagName("style")) {
+        if(v.innerText&&v.innerText.indexOf("pre")>-1){
+            document.getElementsByTagName("head")[0].removeChild(v)
+        }
+    }
 }
