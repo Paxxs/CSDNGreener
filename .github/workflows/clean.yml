@@ -46,7 +46,7 @@ jobs:
           rm -f *.orig
 
       - name: push
-        uses: github-actions-x/commit@v2.8
+        uses: github-actions-x/commit@v2.9
         with: 
           # Github Token with commit access
           github-token: ${{ secrets.GITHUB_TOKEN }}
